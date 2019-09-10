@@ -1,107 +1,170 @@
 <title>规则收集/下载</title>
 	<h3 id="规则收集/下载">规则收集/下载</h3>
 
+<script type="text/javascript">function showDes() {
+		if (document.getElementById("ssss").style.display == "none")
+			document.getElementById("ssss").style.display = "block";
+		else {
+			document.getElementById("ssss").style.display = "none";
+		}
+	}
+</script>
+
+<style>
+        table,table tr th, table tr td { border:1px solid #000000; }
+        table { line-height: 25px; text-align: center; border-collapse: collapse; padding:2px;}   
+    </style>
+
 <ul>
   <li><a href="https://ausers.github.io/">返回客户端下载页</a></li>
   <li><a href="https://github.com/ausers/ausers.github.io/issues">如果有任何遗漏或觉得不错的规则推荐，欢迎点击提Issues</a></li>
   <li>备注：Surfboard/Postern支持导入Surge配置
 </ul>
 
-<style>
-        table,table tr th, table tr td { border:1px solid #000000; }
-        table { line-height: 25px; text-align: center; border-collapse: collapse; padding:2px;}   
-    </style>
-	
-	
+	<div>
+		<button onclick="showDes()">下列规则相关说明</button>
+	</div>
+	<div id="ssss" style="display:none;">
+		<h3 id="ACL规则说明"><a href="https://github.com/ACL4SSR/ACL4SSR/blob/master/README.md" rel="nofollow">安卓SSR去广告ACL规则说明</a></h3>
+
+<ul>
+<li>屏蔽小米手机和魅族flyme rom系统广告</li>
+<li>国内网站均直接连接</li>
+<li>屏蔽常用视频网站广告</li>
+<li>屏蔽常用网站广告、其他流媒体网站广告</li>
+<li>屏蔽部分应用程序开屏广告</li>
+<li>屏蔽部分运营商劫持网页弹出的漂浮球广告、流量统计</li>
+<li>拦截常用应用程序的隐私跟踪、行为分析、数据统计</li>
+</ul>
+
+<h3 id="神机规则说明"><a href="https://github.com/ConnersHua/Profiles/blob/master/README.md" rel="nofollow">神机规则说明</a></h3>
+<p>此处仅作简单介绍，更多Q&A请点击标题查看</p>
+<p>规则分为<strong>标准版</strong>、<strong>专业版</strong>和<strong>回国版</strong></p>
+<h3 id="标准版">标准版</h3>
+<ul>
+<li>使用公共 DNS 达到快速、准确、稳定及安全的解析</li>
+<li>国内直连、海外加速</li>
+<li>Apple 服务加速</li>
+<li>海外媒体（部分）服务指定节点</li>
+</ul>
+<h3 id="专业版">专业版</h3>
+<p>在标准版的基础上加入：</p>
+<ul>
+<li>拦截运营商劫持</li>
+<li>拦截臭名昭著的欺诈网站（如<strong>思杰马克丁</strong>伪造的一系列软件官网、MacKeeper等）</li>
+<li>拦截应用广告
+<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> 网页广告请使用 Safari 内容拦截器如 <a href="https://apps.apple.com/app/apple-store/id1047223162" rel="nofollow">ADGuard</a> 或集成去广告功能浏览器</li>
+</ul>
+<h3 id="回国版">回国版</h3>
+<ul>
+<li>国内媒体服务解锁</li>
+<li>拦截应用广告
+<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> 网页广告请使用 Safari 内容拦截器如 <a href="https://itunes.apple.com/app/apple-store/id1047223162?mt=8" rel="nofollow">ADGuard</a> 或集成去广告功能浏览器</li>
+</ul>
+<p><strong>下载</strong></p>
+<ul>
+<li>移动设备长按版本名即可「拷贝」链接进行导入</li>
+<li>有自定义规则需求方才使用「快捷指令」</li>
+</ul>
+
+<h3 id="懒人规则说明"><a href="https://github.com/Hackl0us/SS-Rule-Snippet" rel="nofollow">懒人规则</a>（也叫墙洞）说明</h3>
+<li><a href="https://github.com/Hackl0us/SS-Rule-Snippet/wiki" rel="nofollow">导入问题请参阅懒人规则导入Wiki</a></li>
+<p><strong>规则集说明</strong></p>
+<ul>
+<li><strong>基础</strong> 规则集：最基本的规则，这些规则构成了懒人规则。刚好满足科学上网的基本需求，轻便简洁。</li>
+<li><strong>App</strong> 规则集：包含了对一些 工具、流媒体、社交分享 等类别的 App 的特殊优化规则，如果您有使用这些 App，请自行拼合整理到您使用的规则中。</li>
+<li><strong>自选</strong> 规则集：包含了一些针对部分用户群体（如 大学生、经常观看视频用户、成人等）而定制的规则，如果您有需求，请自行拼合整理到您使用的规则中。</li>
+<li><strong>功能性</strong> 规则集：用来实现一些高级的功能，例如修复 Siri 高延迟或不可用、实现 Surge Legacy 版本的全局代理等等功能示。建议用户根据引导，正确拼合使用规则。</li>
+</ul>
+
+	</div>
+	<div>
+		<button onclick="showDes()">下列规则相关说明</button>
+	</div>
+
 <h3 id="ACL规则"><a href="https://github.com/ACL4SSR/ACL4SSR" rel="nofollow">ACL规则</a>（适用客户端：Android ss/r，ShadowsocksX-NG-R8）</h3>
+
 <table>
 <thead>
 	<tr>
-		<th><font color="#FF0000" rel="nofollow">文件</font></th>
+		<th><font color="#FF0000" rel="nofollow">文件（长按复制链接）</font></th>
 		<th><font color="#FF0000" rel="nofollow">默认</font></th>
 		<th><font color="#FF0000" rel="nofollow">去广告</font></th>
 		<th><font color="#FF0000" rel="nofollow">局域网</font></th>
 		<th><font color="#FF0000" rel="nofollow">国内IP段</font></th>
 		<th><font color="#FF0000" rel="nofollow">国内域名</font></th>
 		<th><font color="#FF0000" rel="nofollow">国外</font></th>
-		<th><font color="#FF0000" rel="nofollow">更新链接</font></th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
-		<td>banAD.acl</td>
+		<td><a href="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/banAD.acl" rel="nofollow">banAD.acl</a></td>
 		<td>代理</td>
 		<td>是</td>
 		<td>直连</td>
 		<td>有-直连</td>
 		<td>常用域名-直连</td>
 		<td>代理-常用国外域名增强</td>
-		<td>https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/banAD.acl</td>
 	</tr>
 	<tr>
-		<td>onlybanAD.acl</td>
+		<td><a href="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/onlybanAD.acl" rel="nofollow">onlybanAD.acl</a></td>
 		<td>代理</td>
 		<td>是</td>
 		<td>直连</td>
 		<td>无</td>
 		<td>无</td>
 		<td>代理-常用国外域名增强</td>
-		<td>https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/onlybanAD.acl</td>
 	</tr>
 	<tr>
-		<td>nobanAD.acl</td>
+		<td><a href="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/nobanAD.acl" rel="nofollow">nobanAD.acl</a></td>
 		<td>代理</td>
 		<td>否</td>
 		<td>直连</td>
 		<td>有-直连</td>
 		<td>常用域名-直连</td>
 		<td>全局代理</td>
-		<td>https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/nobanAD.acl</td>
 	</tr>
 	<tr>
-		<td>backcn-banAD.acl</td>
+		<td><a href="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl" rel="nofollow">backcn-banAD.acl</a></td>
 		<td>直连</td>
 		<td>是</td>
 		<td>直连</td>
 		<td>有-代理</td>
 		<td>无</td>
 		<td>直连</td>
-		<td>https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl</td>
 	</tr>
 	<tr>
-		<td>gfwlist-banAD.acl</td>
+		<td><a href="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/gfwlist-banAD.acl" rel="nofollow">gfwlist-banAD.acl</a></td>
 		<td>直连</td>
 		<td>是</td>
 		<td>直连</td>
 		<td>无</td>
 		<td>无</td>
 		<td>代理-gfwlist列表</td>
-		<td>https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/gfwlist-banAD.acl</td>
 	</tr>
 	<tr>
-		<td>fullgfwlist.acl<br>（原版SS能且仅能使用此规则）</td>
+		<td><a href="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/fullgfwlist.acl" rel="nofollow">fullgfwlist.acl</a><br>（原版SS能且仅能使用此规则）</td>
 		<td>直连</td>
 		<td>否</td>
 		<td>直连</td>
 		<td>无</td>
 		<td>无</td>
 		<td>代理-gfwlist列表</td>
-		<td>https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/fullgfwlist.acl</td>
 	</tr>
 	<tr>
-		<td>gfwlist-user.rule</td>
+		<td><a href="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/gfwlist-user.rule" rel="nofollow">gfwlist-user.rule</a></td>
 		<td>直连</td>
 		<td>是</td>
 		<td>直连</td>
 		<td>无</td>
 		<td>无</td>
 		<td>代理-gfwlist列表</td>
-		<td>https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/gfwlist-user.rule</td>
 	</tr>
 </tbody>
 </table>
 
 <h3 id="神机规则"><a href="https://github.com/ConnersHua/Profiles" rel="nofollow">神机规则</a></h3>
+
 <table>
 <thead>
 	<tr>
@@ -118,7 +181,7 @@
 		<td align="center" rel="nofollow">无</td>
 		<td align="center" rel="nofollow"><a href="https://raw.githubusercontent.com/ConnersHua/Profiles/master/Clash/Pro.yaml" rel="nofollow" rel="nofollow">Pro</a></td>
 		<td align="center" rel="nofollow"><a href="https://raw.githubusercontent.com/ConnersHua/Profiles/master/Clash/BacktoCN.yaml" rel="nofollow" rel="nofollow">BacktoCN</a></td>
-		<td align="center" rel="nofollow"><a href="" rel="nofollow" rel="nofollow"></a></td>
+		<td align="center" rel="nofollow">教程需要代理</td>
 	</tr>
 	<tr>
 		<td align="center" rel="nofollow">Kitsunebi</td>
@@ -132,7 +195,7 @@
 		<td align="center" rel="nofollow"><a href="https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Basic.conf" rel="nofollow" rel="nofollow">Basic</a></td>
 		<td align="center" rel="nofollow"><a href="https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Pro.conf" rel="nofollow" rel="nofollow">Pro</a> | <a href="https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Rejection.conf" rel="nofollow" rel="nofollow">Rejection</a></td>
 		<td align="center" rel="nofollow"><a href="https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/BacktoCN.conf" rel="nofollow" rel="nofollow">BacktoCN</a> | <a href="https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Rejection.conf" rel="nofollow" rel="nofollow">Rejection</a></td>
-		<td align="center" rel="nofollow"><a href="https://medium.com/circumvention-technology/import-profile-on-quantumult-2e5cef9cb0c5" rel="nofollow" rel="nofollow">iOS</a></td>
+		<td align="center" rel="nofollow"><a href="https://medium.com/circumvention-technology/import-profile-on-quantumult-2e5cef9cb0c5" rel="nofollow" rel="nofollow">iOS</a><br>（订阅时注意带有⚠️的策略）</td>
 	</tr>
 	<tr>
 		<td align="center" rel="nofollow">Quantumult X</td>
@@ -165,7 +228,8 @@
 </tbody>
 </table>
 
-<h3 id="懒人规则"><a href="https://github.com/Hackl0us/SS-Rule-Snippet" rel="nofollow">懒人规则（也叫墙洞）</a></h3>
+<h3 id="懒人规则"><a href="https://github.com/Hackl0us/SS-Rule-Snippet" rel="nofollow">懒人规则</a>（也叫墙洞）</h3>
+
 <table>
 <thead>
 	<tr>
@@ -181,6 +245,33 @@
 		<td>Surge/Quantumult/Shadowrocket/Surfboard/clashX</td>
 		<td>无</td>
 		<td><a href="https://github.com/Hackl0us/SS-Rule-Snippet#%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E8%A7%84%E5%88%99" rel="nofollow">懒人规则</a></td>
+	</tr>
+</tbody>
+</table>
+<h3 id="懒人规则一键更新规则">一键更新规则</h3>
+<table>
+<thead>
+	<tr>
+		<th align="center">工具</th>
+		<th align="center">下载地址</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td align="center">Surge 2</td>
+		<td align="center"><a href="https://www.icloud.com/shortcuts/eb5f7930bf8e414993452c3cae1906ca" rel="nofollow">捷径</a> / JSBox</td>
+	</tr>
+	<tr>
+		<td align="center"><a href="https://itunes.apple.com/us/app/surge-3-web-developer-tool/id1329879957" rel="nofollow">Surge 3</a></td>
+		<td align="center"><a href="https://www.icloud.com/shortcuts/5dee27f365974ba7bec536adc543b24d" rel="nofollow">捷径</a> / JSBox</td>
+	</tr>
+	<tr>
+		<td align="center"><a href="https://itunes.apple.com/hk/app/quantumult/id1252015438" rel="nofollow">Quantumult</a></td>
+		<td align="center"><a href="https://www.icloud.com/shortcuts/884f18991ad14e69b0c13a1a4e7b3aac" rel="nofollow">捷径</a> / JSBox</td>
+	</tr>
+	<tr>
+		<td align="center"><a href="https://itunes.apple.com/us/app/shadowrocket/id932747118" rel="nofollow">Shadowrocket</a></td>
+		<td align="center"><a href="https://www.icloud.com/shortcuts/29b06dddc6684afd9cf8a17b7c0af901" rel="nofollow">捷径</a> / JSBox</td>
 	</tr>
 </tbody>
 </table>
