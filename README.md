@@ -1,6 +1,6 @@
 # ausers.github.io
 
-## 排版？不存在的能看就行
+排版？不存在的能看就行
 
 * [代理客户端下载](https://ausers.github.io/index.html)
 * [规则收集/下载](https://ausers.github.io/rule.html)
