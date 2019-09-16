@@ -1,0 +1,38 @@
+<style>
+   table,table tr th, table tr td { border:1px solid #000000; }
+   table { border-collapse: collapse; padding:2px;}   
+    </style>
+	
+<h1 id="SSRSpeed">SSRSpeed教程（Windows）</h1>
+<br>
+<p>此测速结果仅供参考,由于网络环境的复杂多变,其不具备可靠性,仅代表此时此地此网络条件下的结果</p>
+<p>此测试将会大幅消耗流量,请谨慎使用</p>
+<p>请勿不经节点所有者同意擅自公开节点具体信息</p>
+<p>此程序需要Python环境支持,此教程为Windows下的操作步骤</p>
+<br>
+
+<h3 id="条件">0.  请确保自己可以满足下列条件</h3>
+<p>(1) 已经下载了<a href="https://github.com/NyanChanMeow/SSRSpeed">SSRSpeed</a></p>
+<p>(1) 已经安装了<a href="https://www.python.org/">Python</a></p>
+<p>(2) 拥有任意可使用的节点</p>
+<p>(3) <strong>能够使用 Google 学会不明白的操作</strong></p>
+<br>
+
+<h3 id="安装">1.  安装</h3>
+<p>(1) Python环境安装。注意！下载时<strong>32位64位不要搞混</strong>！</p>
+<p>(2) SSRSpeed下载解压</p>
+<p>(3) 在解压目录按住"Shift"+"鼠标右键"打开命令提示符或PowerShell，复制粘贴以下代码，等待下载安装完成</p>
+<table><tbody><tr><td align="left"><pre style="box-sizing">
+python -m pip install --upgrade pip
+pip3 install -r requirements.txt
+pip3 install pillow
+pip3 install requests
+pip3 install pysocks
+</pre></pre></td></tr></tbody></table>
+<br>
+
+<h3 id="测速">2.  开始测速</h3>
+<p>(1) 命令示例：</p>
+<table><tbody><tr><td align="left"><pre style="box-sizing">python main.py -u 订阅链接</pre></td></tr></tbody></table>
+<p>(2) 其他命令自行查阅项目地址<a href="https://github.com/NyanChanMeow/SSRSpeed/blob/master/README.md">README</a></p>
+<br>
