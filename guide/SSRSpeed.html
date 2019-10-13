@@ -3,6 +3,15 @@
    table { border-collapse: collapse; padding:2px;}   
     </style>
 	
+<script type="text/javascript">function showDes() {
+		if (document.getElementById("ssss").style.display == "none")
+			document.getElementById("ssss").style.display = "block";
+		else {
+			document.getElementById("ssss").style.display = "none";
+		}
+	}
+</script>
+
 <h1 id="SSRSpeed">SSRSpeed教程（Windows）</h1>
 <br>
 <p>此测速结果仅供参考,由于网络环境的复杂多变,其不具备可靠性,仅代表此时此地此网络条件下的结果</p>
@@ -36,3 +45,46 @@ pip3 install pysocks
 <table><tbody><tr><td align="left"><pre style="box-sizing">python main.py -u 订阅链接</pre></td></tr></tbody></table>
 <p>(2) 其他命令自行查阅项目地址<a href="https://github.com/NyanChanMeow/SSRSpeed/blob/master/README.md">README</a></p>
 <br>
+
+<body>
+	<div>
+		<button onclick="showDes()">不想输入命令？</button>
+	</div>
+	<div id="ssss" style="display:none;">
+		不想输入命令？<a href="https://github.com/ausers/ausers.github.io/blob/master/files/ssrspeed%E4%B8%80%E9%94%AE.bat">试试这个</a>
+		<table><tbody><tr><td align="left"><pre style="box-sizing">
+@echo off&
+echo ##### 请放在ssrspeed目录下运行 #####
+echo.
+:start
+echo 1：开始测速
+echo 2：安装pip
+echo 请选择（1/2）：
+choice /c 12
+if %errorlevel%==2 (goto :pip)
+if %errorlevel%==1 (goto :test)
+
+:pip
+python -m pip install --upgrade pip
+pip3 install -r requirements.txt
+pip3 install pillow
+pip3 install requests
+pip3 install pysocks
+pause
+&& goto :start
+
+:test
+set /p a=请输入您的订阅链接:
+if "%a%"=="" (
+goto :test
+) else (
+python main.py -u "%a%"
+)
+pause
+</pre></pre></td></tr></tbody></table>
+<br>
+	</div>
+	<div>
+		<button onclick="showDes()">不想输入命令？</button>
+	</div>
+</body>
