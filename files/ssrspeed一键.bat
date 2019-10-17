@@ -4,8 +4,10 @@ echo.
 :start
 echo 1：开始测速
 echo 2：安装pip
-echo 请选择（1/2）：
-choice /c 12
+echo 3：Web UI
+echo 请选择（1/2/3）：
+choice /c 123
+if %errorlevel%==3 (goto :web)
 if %errorlevel%==2 (goto :pip)
 if %errorlevel%==1 (goto :test)
 
@@ -26,3 +28,6 @@ goto :test
 python main.py -u "%a%"
 )
 pause
+
+:web
+python web.py
