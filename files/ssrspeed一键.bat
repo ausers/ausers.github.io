@@ -28,6 +28,7 @@ goto :test
 python main.py -u "%a%"
 )
 pause
+EXIT
 
 :web
 python web.py
