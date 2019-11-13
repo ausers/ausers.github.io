@@ -3,13 +3,10 @@
 Last update：2019-11-13
 
 - [本群须知](#law)
-
 - [常见问题](#problem)
-
 - [防失联](#connect)
 
 ## <span id="law">🔝本群须知</span>
-
 ⚠️永久官网跳转链接：https://ssrssr.xyz
 
 _本站提供中高端网络服务，旨在保证节点速度与稳定性：SSR节点全中转（除免费节点），V2ray节点为阿里香港/新加坡200M直连；线路均为独享节点，无合租/共享。_
@@ -26,8 +23,9 @@ _本站支持套餐叠加购买（叠流量不叠时长）_
 
 交流群：[@amcloud](https://t.me/amcloud)
 
-## <span id="problem">⭐常见问题⭐</span>
 
+
+## <span id="problem">⭐常见问题⭐</span>
 - [x] 别忘了网站工单，另外提问时建议遵循[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)一文
 
 - [x] Telegram绑定：进入官网→资料编辑→Telegram绑定（签到功能当前停用）
@@ -52,6 +50,8 @@ _本站支持套餐叠加购买（叠流量不叠时长）_
 
 - [x] Google play无法下载/更新（显示正在等待下载），可尝试查看“已安装的应用”中有没有处于下载状态的应用，全部停止掉
 
+
+
 ⭐遇到问题时，可以先尝试：
 
 更新订阅链接
@@ -68,6 +68,8 @@ Windows退出安全软件/检查端口占用
 
 _以上无法解决时，虚心向群里讨教或者私聊群猪/提交工单。_
 
+
+
 ## <span id="connect">防失联三部曲</span>
 
 - Google搜索“[安慕希网络加速](http://google.com/search?q=安慕希网络加速)”
@@ -75,3 +77,4 @@ _以上无法解决时，虚心向群里讨教或者私聊群猪/提交工单。
 - 回复注册验证码等邮件
 
 - 访问[GitHub](https://github.com/amcloudme/amcloud/blob/master/README.md)页获取
+
