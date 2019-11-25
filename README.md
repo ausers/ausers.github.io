@@ -2,8 +2,8 @@
 
 排版？样式？不存在的能看就行
 
-> [广告时间：安慕希网络加速](http://amcy.in)
-> [广告时间：Shuviの小店](http://pro.moebili.com/)
+>广告时间： [安慕希网络加速](http://amcy.in)#[Shuviの小店](http://pro.moebili.com/)
+
 * [代理客户端下载](https://ausers.github.io/index.html)
 * [规则收集/下载](https://ausers.github.io/rule.html)
 * [代理客户端使用教程](https://ausers.github.io/guide.html)
