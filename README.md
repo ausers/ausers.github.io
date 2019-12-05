@@ -2,7 +2,7 @@
 
 排版？样式？不存在的能看就行
 
->广告时间：[出一个机场账号，202net，到期时间2020.9.25，价格面议](https://t.me/Capricorn_xz)
+>广告时间：[出一个机场账号，202net，Plus年套餐月50G，到期时间2020.9，价格面议](https://t.me/Capricorn_xz)
 
 >广告时间： [安慕希网络加速](http://amcy.in)#[**Shuviの小店**](http://pro.moebili.com/)
 
