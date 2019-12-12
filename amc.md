@@ -2,7 +2,7 @@
 
 本文[镜像页](https://telegra.ph/安慕希网络加速-10-22)（国内不可直连）
 
-Last update：2019-11-13
+Last update：2019-12-12
 
 - [本群须知](#law)
 - [常见问题](#problem)
