@@ -5,10 +5,10 @@
 <meta http-equiv="Pragma" content="no-cache"> 
 
 <script type="text/javascript">function showDes() {
-		if (document.ssss.style.display == "none")
-			document.ssss.style.display = "block";
+		if ($(".test").style.display == "none")
+			$(".test").style.display = "block";
 		else {
-			document.ssss.style.display = "none";
+			$(".test").style.display = "none";
 		}
 	}
 </script>
@@ -17,18 +17,18 @@
 <body background="/files/bg.gif">
 <p>这是一个测试页面</p>
 <p>This is a test page</p>
-
+<br>
 <div>
 		<button onclick="showDes()">测试按钮1</button>
 	</div>
-	<div class="ssss" style="display:none;">
+	<div class="test" style="display:none;">
 <p>测试内容1</p>
 </div>
-
+<br>
 <div>
 		<button onclick="showDes()">测试按钮2</button>
 	</div>
-	<div class="ssss" style="display:none;">
+	<div class="test" style="display:none;">
 <p>测试内容2</p>
 </div>
 
