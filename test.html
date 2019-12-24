@@ -3,9 +3,32 @@
 <head>  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Pragma" content="no-cache"> 
+
+<script type="text/javascript">function showDes() {
+		if (document.getElementsByClassName("ssss").style.display == "none")
+			document.getElementsByClassName("ssss").style.display = "block";
+		else {
+			document.getElementsByClassName("ssss").style.display = "none";
+		}
+	}
+</script>
+
 </head>
 <body background="/files/bg.gif">
 <p>这是一个测试页面</p>
 <p>This is a test page</p>
+
+<div>
+		<button onclick="showDes()">测试按钮1</button>
+	</div>
+	<div class="ssss" style="display:none;">
+<p>测试内容2</p>
+
+<div>
+		<button onclick="showDes()">测试按钮2</button>
+	</div>
+	<div class="ssss" style="display:none;">
+<p>测试内容2</p>
+
 </body> 
 </html>
