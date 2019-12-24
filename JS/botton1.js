@@ -6,7 +6,7 @@ function myFunction1() {
         div1.style.display = "none";
     }
     var x;
-    for (var i = 1; i++) {
+    for (var i = 1; i <= 4; i++) {
         if (i == 1) {
             continue;
         } else {
@@ -24,7 +24,7 @@ function myFunction2() {
         div2.style.display = "none";
     }
     var x;
-    for (var i = 1; i++) {
+    for (var i = 1; i <= 4; i++) {
         if (i == 2) {
             continue;
         } else {
@@ -42,7 +42,7 @@ function myFunction3() {
         div3.style.display = "none";
     }
     var x;
-    for (var i = 1; i++) {
+    for (var i = 1; i <= 4; i++) {
         if (i == 3) {
             continue;
         } else {
@@ -60,7 +60,7 @@ function myFunction4() {
         div4.style.display = "none";
     }
     var x;
-    for (var i = 1; i++) {
+    for (var i = 1; i <= 4; i++) {
         if (i == 4) {
             continue;
         } else {
