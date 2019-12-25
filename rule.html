@@ -1,9 +1,13 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
 <head>
   <title>规则收集/下载</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Pragma" content="no-cache"> 
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="keywords" content="代理"/>
   <meta name="keywords" content="规则"/>
   <meta name="keywords" content="去广告"/>
@@ -30,18 +34,10 @@ var _hmt = _hmt || [];
 })();
 </script>
 </head>
-
+	
+<body background="/files/bg.gif">
 	
 	<div style="text-align:center"><h3 id="规则收集/下载">规则收集/下载</h3></div>
-
-<script type="text/javascript">function showDes() {
-		if (document.getElementById("ssss").style.display == "none")
-			document.getElementById("ssss").style.display = "block";
-		else {
-			document.getElementById("ssss").style.display = "none";
-		}
-	}
-</script>
 
 <style>
         table,table tr th, table tr td { border:1px solid #000000; }
@@ -58,109 +54,6 @@ var _hmt = _hmt || [];
   <li>稍微进阶点：来自skk大佬的clash编辑器：<a href="https://clash.skk.moe">https://clash.skk.moe</a></li>
 </ul>
 
-	<div>
-		<button onclick="showDes()">规则简要说明</button>
-	</div>
-	<div id="ssss" style="display:none;">
-		<h4 id="ACL规则说明"><a href="https://github.com/ACL4SSR/ACL4SSR/blob/master/README.md" rel="nofollow">安卓SSR去广告ACL规则说明</a></h4>
-
-<ul>
-<li>屏蔽小米手机和魅族flyme rom系统广告</li>
-<li>国内网站均直接连接</li>
-<li>屏蔽常用视频网站广告</li>
-<li>屏蔽常用网站广告、其他流媒体网站广告</li>
-<li>屏蔽部分应用程序开屏广告</li>
-<li>屏蔽部分运营商劫持网页弹出的漂浮球广告、流量统计</li>
-<li>拦截常用应用程序的隐私跟踪、行为分析、数据统计</li>
-</ul>
-
-<h3 id="神机规则说明"><a href="https://github.com/ConnersHua/Profiles/blob/master/README.md" rel="nofollow">神机规则说明</a></h3>
-<p>此处仅作简单介绍，更多Q&A请点击标题查看</p>
-<p>规则分为<strong>标准版</strong>、<strong>专业版</strong>和<strong>回国版</strong></p>
-<h4 id="标准版">标准版</h4>
-<ul>
-<li>使用公共 DNS 达到快速、准确、稳定及安全的解析</li>
-<li>国内直连、海外加速</li>
-<li>Apple 服务加速</li>
-<li>海外媒体（部分）服务指定节点</li>
-</ul>
-<h4 id="专业版">专业版</h4>
-<p>在标准版的基础上加入：</p>
-<ul>
-<li>拦截运营商劫持</li>
-<li>拦截臭名昭著的欺诈网站（如<strong>思杰马克丁</strong>伪造的一系列软件官网、MacKeeper等）</li>
-<li>拦截应用广告
-<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> 网页广告请使用 Safari 内容拦截器如 <a href="https://apps.apple.com/app/apple-store/id1047223162" rel="nofollow">ADGuard</a> 或集成去广告功能浏览器</li>
-</ul>
-<h4 id="回国版">回国版</h4>
-<ul>
-<li>国内媒体服务解锁</li>
-<li>拦截应用广告
-<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> 网页广告请使用 Safari 内容拦截器如 <a href="https://itunes.apple.com/app/apple-store/id1047223162?mt=8" rel="nofollow">ADGuard</a> 或集成去广告功能浏览器</li>
-</ul>
-<p><strong>下载</strong></p>
-<ul>
-<li>移动设备长按版本名即可「拷贝」链接进行导入</li>
-<li>有自定义规则需求方才使用「快捷指令」</li>
-</ul>
-
-<h3 id="懒人规则说明"><a href="https://github.com/Hackl0us/SS-Rule-Snippet" rel="nofollow">懒人规则说明</a></h3>
-<li><a href="https://github.com/Hackl0us/SS-Rule-Snippet/wiki" rel="nofollow">导入问题请参阅懒人规则导入Wiki</a></li>
-<p><strong>规则集说明</strong></p>
-<ul>
-<li><strong>基础</strong> 规则集：最基本的规则，这些规则构成了懒人规则。刚好满足科学上网的基本需求，轻便简洁。</li>
-<li><strong>App</strong> 规则集：包含了对一些 工具、流媒体、社交分享 等类别的 App 的特殊优化规则，如果您有使用这些 App，请自行拼合整理到您使用的规则中。</li>
-<li><strong>自选</strong> 规则集：包含了一些针对部分用户群体（如 大学生、经常观看视频用户、成人等）而定制的规则，如果您有需求，请自行拼合整理到您使用的规则中。</li>
-<li><strong>功能性</strong> 规则集：用来实现一些高级的功能，例如修复 Siri 高延迟或不可用、实现 Surge Legacy 版本的全局代理等等功能示。建议用户根据引导，正确拼合使用规则。</li>
-</ul>
-
-<h3 id="墙洞规则说明"><a href="https://github.com/lhie1/Rules/blob/master/README.md" rel="nofollow">墙洞规则说明</a><h3>
-<h4 id="function">功能</h4>
-<ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 自动代理 / 全局代理</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 解决本地 DNS 可能带来的干扰</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 解决部分网站跳转问题</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 可突破部分内网限制（公司、学校）</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截部分挖矿 JS 插件</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截常用应用程序及网页的行为分析</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截常用应用程序及网页的数据统计</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截常用应用程序及网页的隐私跟踪</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截各大购物网站的运营商劫持</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截 Content Security Policy 劫持</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截 CNNIC 根证书劫持</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽部分应用程序的启动广告</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽部分运营商劫持网页弹出的流量统计</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽部分运营商劫持网页弹出的漂浮球广告</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽常用视频广告</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽常用网站广告、其他流媒体网站广告</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽法轮功等反华势力网站</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 所有国内网站直线连接</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Apple 服务加速（App Store、Apple Music、Apple流媒体、iCloud备份、iCloud Drive、iTunes 等）</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 国外常用网站加速（Google/Youtube/Twitter/Facebook/instagram/wikipedia/Github 等）</li>
-</ul>
-<h4 id="function">MitM</h4>
-<p>简介：MitM（即 Man-in-the-middle attack，用于解密 HTTPS 的流量）</p>
-<p>iOS：</p>
-<pre><code>iOS 9 以上的系统都需要在安装证书后到关于本机里信任证书才可使其证书有效。
-
-1. 安装：
-* Surge：配置 - 编辑配置 - HTTPS 解密 - 安装证书
-* Shadowrocket：设置 - 证书 - 安装证书
-* Quantumult：Settings - HTTPS - HTTPS Decryption
-
-2. 信任：
-设置 - 通用 - 关于本机 - 证书信任设置 - 信任
-
-备注：只需要安装并信任一次，使用 JSBox 升级规则丝毫不会影响证书。
-备注：不要自己去生成新证书，会导致规则与证书不匹配导致 MitM 失效直接导致无法加载的问题，导出规则后直接安装并信任就可以了。如果不小心点到了，重新运行 JSBox 导出规则即可正确安装。
-</code></pre>
-<p>macOS：</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/lhie1/Rules/master/images/macOS_MitM.jpg"><img src="https://raw.githubusercontent.com/lhie1/Rules/master/images/macOS_MitM.jpg" alt="" style="max-width:100%;"></a></p>
-
-	</div>
-	<div>
-		<button onclick="showDes()">规则简要说明</button>
-	</div>
 
 <h3 id="ACL规则"><a href="https://github.com/ACL4SSR/ACL4SSR" name="acl" rel="nofollow">安卓SSR去广告ACL规则</a></h3>
 
@@ -242,6 +135,24 @@ var _hmt = _hmt || [];
 	</tr>
 </tbody>
 </table>
+<br>
+<button class="button button1" onclick="myFunction1()"><h3 id="ACL规则说明">安卓SSR去广告ACL规则说明</h3></button>
+<br>
+<a href="https://github.com/ACL4SSR/ACL4SSR/blob/master/README.md" rel="nofollow">安卓SSR去广告ACL规则说明</a>
+<div id="myDIV1" style="display: none;">
+<ul>
+<li>屏蔽小米手机和魅族flyme rom系统广告</li>
+<li>国内网站均直接连接</li>
+<li>屏蔽常用视频网站广告</li>
+<li>屏蔽常用网站广告、其他流媒体网站广告</li>
+<li>屏蔽部分应用程序开屏广告</li>
+<li>屏蔽部分运营商劫持网页弹出的漂浮球广告、流量统计</li>
+<li>拦截常用应用程序的隐私跟踪、行为分析、数据统计</li>
+</ul>
+<br>
+<button class="button button1" onclick="myFunction1()"><h3 id="ACL规则说明">安卓SSR去广告ACL规则说明</h3></button>
+</div>
+<br>
 
 <h3 id="神机规则"><a href="https://github.com/ConnersHua/Profiles/tree/master" name="sj" rel="nofollow">神机规则</a></h3>
 
@@ -314,6 +225,41 @@ var _hmt = _hmt || [];
 	</tr>
 </tbody>
 </table>
+<br>
+<button class="button button1" onclick="myFunction2()"><h3 id="神机规则说明"><a href="https://github.com/ConnersHua/Profiles/blob/master/README.md" rel="nofollow">神机规则说明</a></h3></button>
+<br>
+<div id="myDIV2" style="display: none;">
+<p>规则分为<strong>标准版</strong>、<strong>专业版</strong>和<strong>回国版</strong></p>
+<h4 id="标准版">标准版</h4>
+<ul>
+<li>使用公共 DNS 达到快速、准确、稳定及安全的解析</li>
+<li>国内直连、海外加速</li>
+<li>Apple 服务加速</li>
+<li>海外媒体（部分）服务指定节点</li>
+</ul>
+<h4 id="专业版">专业版</h4>
+<p>在标准版的基础上加入：</p>
+<ul>
+<li>拦截运营商劫持</li>
+<li>拦截臭名昭著的欺诈网站（如<strong>思杰马克丁</strong>伪造的一系列软件官网、MacKeeper等）</li>
+<li>拦截应用广告
+<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> 网页广告请使用 Safari 内容拦截器如 <a href="https://apps.apple.com/app/apple-store/id1047223162" rel="nofollow">ADGuard</a> 或集成去广告功能浏览器</li>
+</ul>
+<h4 id="回国版">回国版</h4>
+<ul>
+<li>国内媒体服务解锁</li>
+<li>拦截应用广告
+<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> 网页广告请使用 Safari 内容拦截器如 <a href="https://itunes.apple.com/app/apple-store/id1047223162?mt=8" rel="nofollow">ADGuard</a> 或集成去广告功能浏览器</li>
+</ul>
+<p><strong>下载</strong></p>
+<ul>
+<li>移动设备长按版本名即可「拷贝」链接进行导入</li>
+<li>有自定义规则需求方才使用「快捷指令」</li>
+</ul>
+<br>
+<button class="button button1" onclick="myFunction2()"><h3 id="神机规则说明">神机规则说明</h3></button>
+</div>
+<br>
 
 <h3 id="懒人规则"><a href="https://github.com/Hackl0us/SS-Rule-Snippet" name="lr" rel="nofollow">懒人规则</a></h3>
 
@@ -343,6 +289,23 @@ var _hmt = _hmt || [];
 	</tr>
 </tbody>
 </table>
+<br>
+<button class="button button1" onclick="myFunction3()"><h3 id="懒人规则说明">懒人规则说明</h3></button>
+<a href="https://github.com/Hackl0us/SS-Rule-Snippet" rel="nofollow">懒人规则说明</a>
+<br>
+<div id="myDIV3" style="display: none;">
+<li><a href="https://github.com/Hackl0us/SS-Rule-Snippet/wiki" rel="nofollow">导入问题请参阅懒人规则导入Wiki</a></li>
+<p><strong>规则集说明</strong></p>
+<ul>
+<li><strong>基础</strong> 规则集：最基本的规则，这些规则构成了懒人规则。刚好满足科学上网的基本需求，轻便简洁。</li>
+<li><strong>App</strong> 规则集：包含了对一些 工具、流媒体、社交分享 等类别的 App 的特殊优化规则，如果您有使用这些 App，请自行拼合整理到您使用的规则中。</li>
+<li><strong>自选</strong> 规则集：包含了一些针对部分用户群体（如 大学生、经常观看视频用户、成人等）而定制的规则，如果您有需求，请自行拼合整理到您使用的规则中。</li>
+<li><strong>功能性</strong> 规则集：用来实现一些高级的功能，例如修复 Siri 高延迟或不可用、实现 Surge Legacy 版本的全局代理等等功能示。建议用户根据引导，正确拼合使用规则。</li>
+</ul>
+<br>
+<button class="button button1" onclick="myFunction3()"><h3 id="懒人规则说明">懒人规则说明</h3></button>
+</div>
+<br>
 
 <h3 id="墙洞规则"><a href="https://github.com/lhie1/Rules" name="qd" rel="nofollow">墙洞规则</a><h3>
 
@@ -368,3 +331,57 @@ var _hmt = _hmt || [];
 	</tr>
 </tbody>
 </table>
+<br>
+<button class="button button1" onclick="myFunction4()"><h3 id="墙洞规则说明">墙洞规则说明<h3></button>
+<a href="https://github.com/lhie1/Rules/blob/master/README.md" rel="nofollow">墙洞规则说明</a>
+<br>
+<div id="myDIV4" style="display: none;">
+<h4 id="function">功能</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 自动代理 / 全局代理</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 解决本地 DNS 可能带来的干扰</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 解决部分网站跳转问题</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 可突破部分内网限制（公司、学校）</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截部分挖矿 JS 插件</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截常用应用程序及网页的行为分析</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截常用应用程序及网页的数据统计</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截常用应用程序及网页的隐私跟踪</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截各大购物网站的运营商劫持</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截 Content Security Policy 劫持</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 拦截 CNNIC 根证书劫持</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽部分应用程序的启动广告</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽部分运营商劫持网页弹出的流量统计</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽部分运营商劫持网页弹出的漂浮球广告</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽常用视频广告</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽常用网站广告、其他流媒体网站广告</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 屏蔽法轮功等反华势力网站</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 所有国内网站直线连接</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Apple 服务加速（App Store、Apple Music、Apple流媒体、iCloud备份、iCloud Drive、iTunes 等）</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 国外常用网站加速（Google/Youtube/Twitter/Facebook/instagram/wikipedia/Github 等）</li>
+</ul>
+<h4 id="function">MitM</h4>
+<p>简介：MitM（即 Man-in-the-middle attack，用于解密 HTTPS 的流量）</p>
+<p>iOS：</p>
+<pre><code>iOS 9 以上的系统都需要在安装证书后到关于本机里信任证书才可使其证书有效。
+
+1. 安装：
+* Surge：配置 - 编辑配置 - HTTPS 解密 - 安装证书
+* Shadowrocket：设置 - 证书 - 安装证书
+* Quantumult：Settings - HTTPS - HTTPS Decryption
+
+2. 信任：
+设置 - 通用 - 关于本机 - 证书信任设置 - 信任
+
+备注：只需要安装并信任一次，使用 JSBox 升级规则丝毫不会影响证书。
+备注：不要自己去生成新证书，会导致规则与证书不匹配导致 MitM 失效直接导致无法加载的问题，导出规则后直接安装并信任就可以了。如果不小心点到了，重新运行 JSBox 导出规则即可正确安装。
+</code></pre>
+<p>macOS：</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/lhie1/Rules/master/images/macOS_MitM.jpg"><img src="https://raw.githubusercontent.com/lhie1/Rules/master/images/macOS_MitM.jpg" alt="" style="max-width:100%;"></a></p>
+<br>
+<button class="button button1" onclick="myFunction4()"><h3 id="墙洞规则说明">墙洞规则说明<h3></button>
+</div>
+<br>
+	
+<script type="text/javascript" src="/JS/botton1.js"></script>
+</body> 
+</html>
