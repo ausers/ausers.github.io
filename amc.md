@@ -46,7 +46,7 @@ __⚠️不得泄露本站节点信息__
 
 - [x] 群猪：[@cmd88](https://t.me/cmd88)
 
-- [x] 无法私聊？私聊[@spambot](https://t.me/spambot)，[按这个操作](https://raw.githubusercontent.com/ausers/ausers.github.io/master/files/TelegramAccident.gif)
+- [x] 无法私聊？私聊[@spambot](https://t.me/spambot)，[按这个操作](https://ausers.github.io/files/TelegramAccident.gif)
 
 - [x] 本站不提供流媒体账号购买，如有需要，可以咨询有经验的群友，注意甄别
 
