@@ -7,6 +7,7 @@ Last update：2019-12-12
 - [本群须知](#law)
 - [常见问题](#problem)
 - [防失联](#connect)
+- [本文作者的aff：amcy.in](http://amcy.in)
 
 ## <span id="law">🔝本群须知</span>
 ⚠️永久官网跳转链接：https://ssrssr.xyz
@@ -74,15 +75,15 @@ _以上无法解决时，虚心向群里讨教或者私聊群猪/提交工单。
 
 ## <span id="connect">防失联：</span>
 
-- 牢记跳转域名：https://ssrssr.xyz
+- 1.牢记跳转域名：https://ssrssr.xyz
 
-- Google搜索“[安慕希网络加速](http://google.com/search?q=安慕希网络加速)”
+- 2.Google搜索“[安慕希网络加速](http://google.com/search?q=安慕希网络加速)”
 
-- 回复日常通知邮件
+- 3.回复日常通知邮件
 
-- 访问[GitHub](https://github.com/amcloudme/amcloud/blob/master/README.md)页获取
+- 4.访问[GitHub](https://github.com/amcloudme/amcloud/blob/master/README.md)页获取
 
-- 开启DNS over HTTPS，通常这样即可正常访问曾被DNS污染的旧官网域名，方法如下：
+- **5.（推荐，基本无需再考虑DNS污染）开启DNS over HTTPS，通常这样即可正常访问曾被DNS污染的旧官网域名，方法如下：**
 
      Chrome开启DoH：
 
