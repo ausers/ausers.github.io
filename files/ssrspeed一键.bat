@@ -1,6 +1,6 @@
 @echo off&
 echo.
-echo ##### 请放在ssrspeed目录下运行 #####
+echo ##### 请放在SSRSpeed目录下运行 #####
 :start
 echo.
 echo 1：开始测速（默认设置）
@@ -23,8 +23,29 @@ if %errorlevel%==2 (goto :test2)
 if %errorlevel%==1 (goto :test1)
 
 :pip
+
+if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
+bcdedit >nul
+if '%errorlevel%' NEQ '0' (goto UACPrompt) else (goto UACAdmin)
+:UACPrompt
+echo 提示：通用依赖安装需要管理员权限
+echo.
+echo      尝试获取管理员权限，程序将重启
+ping -n 3 127.0.0.1>nul && %1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
+exit /B
+:UACAdmin
+cd /d "%~dp0"
+
 python -m pip install --upgrade pip
-pip3 install -r requirements.txt
+pip3 install requests
+pip3 install pyyaml
+pip3 install Pillow
+pip3 install pysocks
+pip3 install aiohttp
+pip3 install aiohttp_socks
+pip3 install requests[socks]
+pip3 install flask
+pip3 install flask-cors
 pause
 goto :start
 
