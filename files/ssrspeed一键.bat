@@ -23,8 +23,8 @@ if %errorlevel%==2 (goto :test2)
 if %errorlevel%==1 (goto :test1)
 
 :pip
-START python -m pip install --upgrade pip
-START pip3 install -r requirements.txt
+python -m pip install --upgrade pip
+pip3 install -r requirements.txt
 pause
 goto :start
 
