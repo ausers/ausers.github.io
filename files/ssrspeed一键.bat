@@ -6,7 +6,7 @@ echo.
 echo 1：开始测速（默认设置）
 echo 2：开始测速（自定义设置）
 echo 3：Web UI
-echo 4：安装pip
+echo 4：安装pip和相关支持
 echo 5：更多参数（原文英语）
 echo 6：更多参数（谷歌翻译）
 echo 7：当前SSRSpeed版本
@@ -23,11 +23,8 @@ if %errorlevel%==2 (goto :test2)
 if %errorlevel%==1 (goto :test1)
 
 :pip
-python -m pip install --upgrade pip
-pip3 install -r requirements.txt
-pip3 install pillow
-pip3 install requests
-pip3 install pysocks
+START python -m pip install --upgrade pip
+START pip3 install -r requirements.txt
 pause
 goto :start
 
@@ -93,11 +90,11 @@ echo  WEB_PAGE_SIMULATION  Web page simulation test
 echo  ALL                  Full speed test (exclude web page simulation)
 echo.
 echo  Test Methods
-echo  Methods         Remark
-echo  ST_ASYNC        Asynchronous download with single thread
-echo  SOCKET          Raw socket with multithreading
-echo  SPEED_TEST_NET  Speed Test Net speed test
-echo  FAST            Fast.com speed test
+echo  Methods              Remark
+echo  ST_ASYNC             Asynchronous download with single thread
+echo  SOCKET               Raw socket with multithreading
+echo  SPEED_TEST_NET       Speed Test Net speed test
+echo  FAST                 Fast.com speed test
 echo.
 pause
 goto :start
@@ -125,7 +122,7 @@ echo  --use-ssr-cs                            用ShadowsocksR-C＃替换ShadowsocksR
 echo  -g GROUP                                手动设置组。
 echo  -y，--yes                               测试前跳过节点列表确认。
 echo  -C RESULT_COLOR，--color = RESULT_COLOR 导出图像时设置颜色。
-echo  -S SORT_METHOD，--sort = SORT_METHOD    在[speed,rspeed,ping,rping]中选择排序方法，默??认不排序。
+echo  -S SORT_METHOD，--sort = SORT_METHOD    在[speed,rspeed,ping,rping]中选择排序方法，默认不排序。
 echo  -i IMPORT_FILE，--import = IMPORT_FILE  从json文件导入测试结果并导出。
 echo  -skip-requirements-check                跳过要求检查。
 echo  --debug                                 在调试模式下运行程序。
@@ -137,11 +134,11 @@ echo  WEB_PAGE_SIMULATION  网页模拟测试
 echo  ALL                  全速测试（不包括网页模拟）
 echo.
 echo  测试方法
-echo  方法            备注
-echo  ST_ASYNC        单线程异步下载
-echo  SOCKET          具有多线程的原始套接字
-echo  SPEED_TEST_NET  SpeedTest.Net速度测试
-echo  FAST            Fast.com速度测试
+echo  方法                 备注
+echo  ST_ASYNC             单线程异步下载
+echo  SOCKET               具有多线程的原始套接字
+echo  SPEED_TEST_NET       SpeedTest.Net速度测试
+echo  FAST                 Fast.com速度测试
 echo.
 pause
 goto :start
@@ -158,8 +155,9 @@ goto :test3
 goto :jx1
 )
 :jx1
-set /p b=1.在[speedtestnet,fast,socket,stasync]中选择测试方法:
-set /p c=2.在[all,pingonly,wps]中选择测试模式:
+set /p b=1.在[speedtestnet,fast,socket,stasync]中选择输入测试方法:
+set /p c=2.在[all,pingonly,wps]中选择输入测试模式:
+echo [3-8]项可以通过空格分隔关键词
 set /p d=3.按组过滤节点，并使用关键字注释:
 set /p e=4.使用关键字通过注释过滤节点:
 set /p f=5.使用关键字按组名过滤节点:
@@ -170,9 +168,10 @@ set /p j=9.用ShadowsocksR-C＃替换ShadowsocksR-libev(任意输入确定):
 set /p k=10.手动设置组:
 set /p l=11.测试前跳过节点列表确认(任意输入确定):
 set /p m=12.导出图像时设置颜色:
-set /p n=13.在[speed,rspeed,ping,rping]中选择排序方法，默认不排序，如默认请跳过:
+set /p n=13.在[speed,rspeed,ping,rping]中选择输入排序方法，默认不排序，如默认请跳过:
 set /p o=14.跳过要求检查(任意输入确定):
 set /p p=15.在调试模式下运行程序(任意输入确定):
+echo.
 if "%b%"=="" (
 set b= && goto :jx2
 ) else (
@@ -265,4 +264,5 @@ set p=--debug && goto :jx16
 :jx16
 ::echo %a% %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
 python main.py -u "%a%" %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
+pause
 goto :start
