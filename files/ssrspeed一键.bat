@@ -4,35 +4,27 @@ echo ##### 请放在SSRSpeed目录下运行 #####
 echo.
 if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
 bcdedit >nul
-if '%errorlevel%' NEQ '0' (goto UACPrompt) else (goto UACAdmin)
-:UACPrompt
-echo 提示：通用依赖安装需要管理员权限（命令4）
-echo.
-echo      尝试获取管理员权限，程序将重启
-ping -n 3 127.0.0.1>nul && %1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
-exit /B
-:UACAdmin
-cd /d "%~dp0"
-echo.
-echo 已获取管理员权限
+if '%errorlevel%' NEQ '0' (echo 当前无管理员权限) else (echo 当前已获取管理员权限)
 if exist "%~dp0\clients\v2ray-core\v2ray.exe" (echo 发现v2ray.exe，已安装V2ray-core ) else (echo 未发现v2ray.exe，可能未安装V2ray-core )
-echo.
 :start
 echo.
 echo 1：开始测速（默认设置）
 echo 2：开始测速（自定义设置）
 echo 3：Web UI
 echo 4：安装pip和相关支持（需要管理员权限）
-echo 5：更多参数（原文英语）
-echo 6：更多参数（谷歌翻译）
+echo 5：通过JSON结果导出图像结果
+echo 6：参数查阅
 echo 7：当前SSRSpeed版本
 echo 8：你很厉害，想全部自己输入
-echo 请选择（1~8）：
-choice /c 12345678
+echo 9：为本次运行获取管理员权限
+echo.
+echo 请选择（1~9）：
+choice /c 123456789
+if %errorlevel%==9 (goto :uac)
 if %errorlevel%==8 (goto :write)
 if %errorlevel%==7 (goto :ver)
-if %errorlevel%==6 (goto :fy)
-if %errorlevel%==5 (goto :yw)
+if %errorlevel%==6 (goto :help)
+if %errorlevel%==5 (goto :json)
 if %errorlevel%==4 (goto :pip)
 if %errorlevel%==3 (goto :web)
 if %errorlevel%==2 (goto :test2)
@@ -74,10 +66,28 @@ ping -n 5 127.0.0.1>nul && start http://127.0.0.1:10870/
 pause
 goto :start
 
+:json
+if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
+bcdedit >nul
+if '%errorlevel%' NEQ '0' (goto :json2) else (echo #注意：当前已获取管理员权限，无法通过拖拽获取路径 && goto :json2)
+:json2
+set /p j=请把JSON文件拖到本窗口或输入JSON文件路径，并回车:
+python main.py -i "%j%"
+pause
+goto :start
+
 :ver
 python main.py --version
 pause
 goto :start
+
+:help
+echo.
+echo 1：原文（en）
+echo 2：翻译（zh）
+choice /c 123456789
+if %errorlevel%==2 (goto :fy)
+if %errorlevel%==1 (goto :yw)
 
 :yw
 
@@ -288,5 +298,24 @@ set p=--debug && goto :jx16
 :jx16
 ::echo %a% %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
 python main.py -u "%a%" %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
+pause
+goto :start
+
+:uac
+echo.
+if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
+bcdedit >nul
+if '%errorlevel%' NEQ '0' (goto UACPrompt) else (goto UACAdmin)
+:UACPrompt
+echo 提示：通用依赖安装需要管理员权限（命令4）
+echo.
+echo      尝试获取管理员权限，程序将重启
+ping -n 3 127.0.0.1>nul && %1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
+exit /B
+:UACAdmin
+cd /d "%~dp0"
+echo.
+echo 已获取管理员权限
+echo.
 pause
 goto :start
