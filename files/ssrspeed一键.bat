@@ -15,7 +15,7 @@ echo.
 echo 1：开始测速（默认设置）
 echo 2：开始测速（自定义设置）
 echo 3：Web UI
-echo 4：安装pip和相关支持（需要管理员权限）
+echo 4：首次运行前安装pip和相关支持（需要管理员权限）
 echo 5：通过JSON结果导出图像结果
 echo 6：参数查阅
 echo 7：当前SSRSpeed版本
@@ -35,6 +35,10 @@ if %errorlevel%==2 (goto :test2)
 if %errorlevel%==1 (goto :test1)
 
 :pip
+if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
+bcdedit >nul
+if '%errorlevel%' NEQ '0' (echo #当前无管理员权限，无法安装。 && echo. && echo #您可以通过命令9获取权限，或右键以管理员权限启动。 && pause && goto :start) else (goto :pip2)
+:pip2
 python -m pip install --upgrade pip
 pip3 install requests
 pip3 install pyyaml
@@ -89,7 +93,7 @@ goto :start
 echo.
 echo 1：原文（en）
 echo 2：翻译（zh）
-choice /c 123456789
+choice /c 12
 if %errorlevel%==2 (goto :fy)
 if %errorlevel%==1 (goto :yw)
 
@@ -300,7 +304,8 @@ set p= && goto :jx16
 set p=--debug && goto :jx16
 )
 :jx16
-::echo %a% %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
+echo python main.py -u "%a%" %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
+echo.
 python main.py -u "%a%" %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
 pause
 goto :start
