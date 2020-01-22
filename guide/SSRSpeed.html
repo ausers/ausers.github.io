@@ -59,7 +59,7 @@ pip3 install pysocks
 <br>
 
 <div id="myDIV1" style="display: none;">
-		<h2>不想输入命令？<a href="https://ausers.github.io/files/ssrspeed一键.bat" download="">试试这个批处理</a></h2><br><img src="/files/ssrspeed.png" alt="功能示例" /><br>或者复制下面框内代码保存为bat文件(以下内容仅为一小部分，建议直接去下批处理)
+		<h2>不想输入命令？<a href="https://ausers.github.io/files/ssrspeed一键.bat" download="">试试这个批处理</a></h2><br><img src="/files/ssrspeed.png" alt="功能示例" /><br>或者复制下面框内代码保存为bat文件(以下内容仅为一小部分(仅有上图功能1,3,4)，建议直接去下批处理)
 		<table><tbody><tr><td align="left"><pre style="box-sizing">
 @echo off&
 echo ##### 请放在ssrspeed目录下运行 #####
@@ -77,9 +77,15 @@ if %errorlevel%==1 (goto :test)
 :pip
 python -m pip install --upgrade pip
 pip3 install -r requirements.txt
-pip3 install pillow
 pip3 install requests
+pip3 install pyyaml
+pip3 install Pillow
 pip3 install pysocks
+pip3 install aiohttp
+pip3 install aiohttp_socks
+pip3 install requests[socks]
+pip3 install flask
+pip3 install flask-cors
 pause
 && goto :start
 
