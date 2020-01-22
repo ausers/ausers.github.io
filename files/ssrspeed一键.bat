@@ -1,12 +1,28 @@
 @echo off&
 echo.
 echo ##### 请放在SSRSpeed目录下运行 #####
+echo.
+if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
+bcdedit >nul
+if '%errorlevel%' NEQ '0' (goto UACPrompt) else (goto UACAdmin)
+:UACPrompt
+echo 提示：通用依赖安装需要管理员权限（命令4）
+echo.
+echo      尝试获取管理员权限，程序将重启
+ping -n 3 127.0.0.1>nul && %1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
+exit /B
+:UACAdmin
+cd /d "%~dp0"
+echo.
+echo 已获取管理员权限
+if exist "%~dp0\clients\v2ray-core\v2ray.exe" (echo 发现v2ray.exe，已安装V2ray-core ) else (echo 未发现v2ray.exe，可能未安装V2ray-core )
+echo.
 :start
 echo.
 echo 1：开始测速（默认设置）
 echo 2：开始测速（自定义设置）
 echo 3：Web UI
-echo 4：安装pip和相关支持
+echo 4：安装pip和相关支持（需要管理员权限）
 echo 5：更多参数（原文英语）
 echo 6：更多参数（谷歌翻译）
 echo 7：当前SSRSpeed版本
@@ -23,19 +39,6 @@ if %errorlevel%==2 (goto :test2)
 if %errorlevel%==1 (goto :test1)
 
 :pip
-
-if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
-bcdedit >nul
-if '%errorlevel%' NEQ '0' (goto UACPrompt) else (goto UACAdmin)
-:UACPrompt
-echo 提示：通用依赖安装需要管理员权限
-echo.
-echo      尝试获取管理员权限，程序将重启
-ping -n 3 127.0.0.1>nul && %1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
-exit /B
-:UACAdmin
-cd /d "%~dp0"
-
 python -m pip install --upgrade pip
 pip3 install requests
 pip3 install pyyaml
