@@ -2,6 +2,7 @@
 echo.
 echo ##### 请放在SSRSpeed目录下运行 #####
 echo.
+if exist "%~dp0\main.py" (echo 已在SSRSpeed目录下，欢迎使用 ) else (echo 请放在SSRSpeed目录下运行！ )
 if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
 bcdedit >nul
 if '%errorlevel%' NEQ '0' (echo 当前无管理员权限) else (echo 当前已获取管理员权限)
