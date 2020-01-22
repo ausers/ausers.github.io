@@ -6,7 +6,10 @@ if exist "%~dp0\main.py" (echo 已在SSRSpeed目录下，欢迎使用 ) else (echo 请放在S
 if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
 bcdedit >nul
 if '%errorlevel%' NEQ '0' (echo 当前无管理员权限) else (echo 当前已获取管理员权限)
-if exist "%~dp0\clients\v2ray-core\v2ray.exe" (echo 发现v2ray.exe，已安装V2ray-core ) else (echo 未发现v2ray.exe，可能未安装V2ray-core )
+if exist "%~dp0\clients\v2ray-core\v2ray.exe" ( set v1=1 ) else ( set v1=0 )
+if exist "%~dp0\clients\v2ray-core\v2ctl.exe" ( set v2=1 ) else ( set v2=0 )
+set /a v3=v1+v2
+if %v3%==2 (echo 已安装V2ray-core ) else (echo 未安装V2ray-core )
 :start
 echo.
 echo 1：开始测速（默认设置）
