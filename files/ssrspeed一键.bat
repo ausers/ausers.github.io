@@ -11,17 +11,17 @@ if exist "%~dp0\clients\v2ray-core\v2ctl.exe" ( set v2=1 ) else ( set v2=0 )
 set /a v3=v1+v2
 if %v3%==2 (echo 已安装V2ray-core ) else (echo 未安装V2ray-core )
 :start
-echo.
+echo ====================================
 echo 1：开始测速（默认设置）
 echo 2：开始测速（自定义设置）
-echo 3：Web UI
+echo 3：使用Web UI
 echo 4：首次运行前安装pip和相关支持（需要管理员权限）
 echo 5：通过JSON结果导出图像结果
 echo 6：参数查阅
 echo 7：当前SSRSpeed版本
 echo 8：你很厉害，想全部自己输入
 echo 9：为本次运行获取管理员权限
-echo.
+echo ====================================
 echo 请选择（1~9）：
 choice /c 123456789
 if %errorlevel%==9 (goto :uac)
@@ -67,6 +67,7 @@ goto :test1
 python main.py -u "%a%"
 )
 pause
+set a=
 EXIT
 
 :web
@@ -78,7 +79,7 @@ goto :start
 :json
 if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
 bcdedit >nul
-if '%errorlevel%' NEQ '0' (goto :json2) else (echo #注意：当前已获取管理员权限，无法通过拖拽获取路径 && goto :json2)
+if '%errorlevel%' NEQ '0' (goto :json2) else (echo #注意：当前已获取管理员权限，无法通过拖拽JSON文件获取路径 && goto :json2)
 :json2
 set /p j=请把JSON文件拖到本窗口或输入JSON文件路径，并回车:
 python main.py -i "%j%"
@@ -188,10 +189,10 @@ goto :start
 
 :test2
 echo.
-echo      以下选项较多，如有不懂或需要跳过，直接回车跳过即可
+echo      以下选项较多(15个)，如有不懂或需要跳过，直接留空回车即可
 echo.
 :test3
-set /p a=请输入您的订阅链接:
+set /p a=请输入您的订阅链接(不可留空):
 if "%a%"=="" (
 goto :test3
 ) else (
@@ -200,8 +201,8 @@ goto :jx1
 :jx1
 set /p b=1.在[speedtestnet,fast,socket,stasync]中选择输入测试方法:
 set /p c=2.在[all,pingonly,wps]中选择输入测试模式:
-echo [3-8]项可以通过空格分隔关键词
-set /p d=3.按组过滤节点，并使用关键字注释:
+echo      以下[3-8]项可以通过空格分隔关键词
+ping -n 2 127.0.0.1>nul && set /p d=3.按组过滤节点，并使用关键字注释:
 set /p e=4.使用关键字通过注释过滤节点:
 set /p f=5.使用关键字按组名过滤节点:
 set /p g=6.按组排除节点，并使用关键字进行注释:
@@ -210,7 +211,7 @@ set /p i=8.通过使用关键字的注释排除节点:
 set /p j=9.用ShadowsocksR-C＃替换ShadowsocksR-libev(任意输入确定):
 set /p k=10.手动设置组:
 set /p l=11.测试前跳过节点列表确认(任意输入确定):
-set /p m=12.导出图像时设置颜色:
+set /p m=12.导出图像时设置颜色[origin,chunxiaoyi]:
 set /p n=13.在[speed,rspeed,ping,rping]中选择输入排序方法，默认不排序，如默认请跳过:
 set /p o=14.跳过要求检查(任意输入确定):
 set /p p=15.在调试模式下运行程序(任意输入确定):
@@ -309,6 +310,22 @@ echo python main.py -u "%a%" %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n%
 echo.
 python main.py -u "%a%" %b% %c% %d% %e% %f% %g% %h% %i% %j% %k% %l% %m% %n% %o% %p%
 pause
+set a=
+set b=
+set c=
+set d=
+set e=
+set f=
+set g=
+set h=
+set i=
+set j=
+set k=
+set l=
+set m=
+set n=
+set o=
+set p=
 goto :start
 
 :uac
