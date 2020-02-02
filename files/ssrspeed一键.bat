@@ -2,7 +2,7 @@
 echo.
 echo ##### 请放在SSRSpeed目录下运行 #####
 echo.
-if exist "%~dp0\main.py" (echo 已在SSRSpeed目录下，欢迎使用 ) else (echo 请放在SSRSpeed目录下运行！ )
+if exist "%~dp0\main.py" (python main.py --version>ver.txt && for /f "delims=" %%i in (ver.txt) do ( set ver=%%i ) && echo 已在SSRSpeed目录下，欢迎使用 && echo 当前版本%%i && del ver.txt) else (echo 请放在SSRSpeed目录下运行！ )
 if exist "%SystemRoot%\SysWOW64" path %path%;%windir%\SysNative;%SystemRoot%\SysWOW64;%~dp0
 bcdedit >nul
 if '%errorlevel%' NEQ '0' (echo 当前无管理员权限) else (echo 当前已获取管理员权限)
