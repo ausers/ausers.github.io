@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="en">
 <head>
+<!---
   <script language="javascript"> 
 //平台、设备和操作系统  
 var system ={  
@@ -19,6 +20,17 @@ if(system.win||system.mac||system.xll){
 window.location.href="https://ausers.github.io/test";  
 }  
 </script>
+--->
+  <script language="javascript"> 
+  function is_weixin(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {
+        return true;
+    } else {
+        return false;
+    }
+}
+    </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-cache" />
 <meta http-equiv="Pragma" content="no-cache" />
