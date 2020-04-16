@@ -1,5 +1,5 @@
 # ausers.github.io
-![GitHub stars](https://img.shields.io/github/stars/ausers/ausers.github.io?style=social)
+![GitHub forks](https://img.shields.io/github/forks/ausers/ausers.github.io?style=social) ![GitHub stars](https://img.shields.io/github/stars/ausers/ausers.github.io?style=social) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/ausers/ausers.github.io)
 
 排版？样式？不存在的能看就行
 
