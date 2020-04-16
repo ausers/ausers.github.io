@@ -1,4 +1,5 @@
 # ausers.github.io
+![GitHub stars](https://img.shields.io/github/stars/ausers/ausers.github.io?style=social)
 
 排版？样式？不存在的能看就行
 
