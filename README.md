@@ -3,7 +3,7 @@
 
 排版？样式？不存在的能看就行
 
->广告时间： [安慕希网络加速](http://amcy.in)#[布丁网络加速](http://pudy.xyz)#[纯甄网络加速](http://chnz.xyz)#[romtic](http://romtic.pudy.xyz)
+>广告时间： [布丁网络加速](http://pudy.xyz)
 
 * [代理客户端下载](https://ausers.github.io/index.html)
 * [规则收集/下载](https://ausers.github.io/rule.html)
